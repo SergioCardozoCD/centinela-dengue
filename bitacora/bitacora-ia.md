@@ -41,7 +41,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | Campo | Registro |
 | --- | --- |
 | **ID** | E-1 |
-| **Fecha y hora** | 2026-10-27 _(hh:mm)_ |
+| **Fecha y hora** | 2026-10-27  |
 | **Fase · paso** | F1 · Paso 0 (Propuesta de Datos) |
 | **Integrante que hizo la consulta** | Sergio Cardozo |
 | **Herramienta y modelo** | Claude (Anthropic) · Claude Opus 5.5 |
@@ -60,7 +60,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | Campo | Registro |
 | --- | --- |
 | **ID** | E-2 |
-| **Fecha y hora** | 2026-10-30 16:10 _(hh:mm)_ |
+| **Fecha y hora** | 2026-10-30 16:10  |
 | **Fase · paso** | F1 · Paso 1 (preparación de datos) |
 | **Integrante que hizo la consulta** | Sergio Cardozo |
 | **Herramienta y modelo** | Claude (Anthropic) · Claude Opus 5.5 |
@@ -72,7 +72,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Decisión** | Modificada |
 | **Justificación** | Los 19 años fallaron con «argumento del nombre de archivo inválido». En el código fuente de `sivirep` 1.0.2, `obtener_ruta_dir()` ejecuta `dir.exists(ruta_dir)`; con `cache = FALSE` y `ruta_dir = NULL` eso es `dir.exists(NULL)`, que da ese error. Se agregó `ruta_dir` |
 | **Cómo se verificó** | Se volvió a ejecutar: 19 de 19 años descargados, 1.757.820 casos × 68 columnas. Reproducción el 2026-10-30: el error indica "Error en dir.exists(ruta_dir)", la línea exacta identificada en el código fuente. |
-| **Evidencia de origen** | bitacora/E-2a.png y E-2b.png (código original de la IA y su explicación, chat del 2026-10-30, 19:11 y 19:13) · bitacora/E-2.png (reproducción del error en R, 2026-10-30) |
+| **Evidencia de origen** | bitacora/bitacora E-2a.jpg y bitacora E-2b.jpg (código original de la IA y su explicación, chat del 2026-10-30, 19:11 y 19:13) · bitacora/bitacora E-2.jpg (reproducción del error en R, 2026-10-30) |
 
 ### E-3
 
@@ -91,14 +91,14 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Decisión** | Rechazada |
 | **Justificación** | `sivirep` limpia los encabezados: la columna se llama `ajuste`. La línea «si no existe, créala vacía» ocultó el error: el filtro no excluyó nada y el script no avisó |
 | **Cómo se verificó** | La salida mostraba `ajuste_` con 100 % de vacíos y una tabla con solo `<NA>` (1.757.820). Con `ajuste`: 0 = 1.133.267, 3 = 460.132, 5 = 69.566, 7 = 94.855. Se reemplazó la línea por un `stopifnot()` que detiene el script si falta la columna. El INS no publica casos con ajuste 6 ni D, así que el impacto en los conteos fue nulo |
-| **Evidencia de origen** | `bitacora/E-3.png` (consola, 2026-10-30 18:32) · archivo `data/dengue_10mun_semana_v0_error_ajuste.csv` |
+| **Evidencia de origen** | `bitacora/bitacora E-3.jpg` (consola, 2026-10-30 18:32) · archivo local `data/dengue_10mun_semana_v0_error_ajuste.csv` (no se publica: datos de salud) |
 
 ### E-4
 
 | Campo | Registro |
 | --- | --- |
 | **ID** | E-4 |
-| **Fecha y hora** | 2026-10-30 _(hh:mm)_ |
+| **Fecha y hora** | 2026-10-30 |
 | **Fase · paso** | F1 · Paso 1 (preparación de datos) |
 | **Integrante que hizo la consulta** | Sergio Cardozo |
 | **Herramienta y modelo** | Claude (Anthropic) · Claude Opus 5.5 |
