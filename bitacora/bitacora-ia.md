@@ -60,7 +60,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | Campo | Registro |
 | --- | --- |
 | **ID** | E-2 |
-| **Fecha y hora** | 2026-10-30 _(hh:mm)_ |
+| **Fecha y hora** | 2026-10-30 16:10 _(hh:mm)_ |
 | **Fase · paso** | F1 · Paso 1 (preparación de datos) |
 | **Integrante que hizo la consulta** | Sergio Cardozo |
 | **Herramienta y modelo** | Claude (Anthropic) · Claude Opus 5.5 |
@@ -71,8 +71,8 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Datos compartidos con la IA** | Solo los mensajes de error de la consola |
 | **Decisión** | Modificada |
 | **Justificación** | Los 19 años fallaron con «argumento del nombre de archivo inválido». En el código fuente de `sivirep` 1.0.2, `obtener_ruta_dir()` ejecuta `dir.exists(ruta_dir)`; con `cache = FALSE` y `ruta_dir = NULL` eso es `dir.exists(NULL)`, que da ese error. Se agregó `ruta_dir` |
-| **Cómo se verificó** | Se volvió a ejecutar: 19 de 19 años descargados, 1.757.820 casos × 68 columnas |
-| **Evidencia de origen** | `bitacora/E-2.png` (consola con los 19 errores) |
+| **Cómo se verificó** | Se volvió a ejecutar: 19 de 19 años descargados, 1.757.820 casos × 68 columnas. Reproducción el 2026-10-30: el error indica "Error en dir.exists(ruta_dir)", la línea exacta identificada en el código fuente. |
+| **Evidencia de origen** | bitacora/E-2a.png y E-2b.png (código original de la IA y su explicación, chat del 2026-10-30, 19:11 y 19:13) · bitacora/E-2.png (reproducción del error en R, 2026-10-30) |
 
 ### E-3
 
