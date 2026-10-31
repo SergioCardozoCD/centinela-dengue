@@ -48,3 +48,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Datos de salud: no se publican (Ley 1581 de 2012)
+data_raw/
+data/
+tmp_xls/
+*.rds
