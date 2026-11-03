@@ -33,8 +33,8 @@ Quienes firman declaran también que **comprenden, verificaron y pueden defender
 
 | Integrante | Firma | Fecha |
 | --- | --- | --- |
-| Sergio Alexander Cardozo Ovadia | ______________________ | 2026-11-03 |
-| Cesar Augusto Coy Velandia | ______________________ | 2026-11-03 |
+| Sergio Alexander Cardozo Ovadia | Sergio Alexander Cardozo Ovadia (firmado digitalmente) | 2026-11-03 |
+| Cesar Augusto Coy Velandia | Cesar Augusto Coy Velandia (firmado digitalmente) | 2026-11-03 |
 
 ## 3. Registro de interacciones
 
@@ -63,7 +63,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | Campo | Registro |
 | --- | --- |
 | **ID** | E-1 |
-| **Fecha y hora** | 2026-10-27 _(hh:mm)_ |
+| **Fecha y hora** | 2026-10-27 11:27 |
 | **Fase · paso** | F1 · Paso 0 (Propuesta de Datos) |
 | **Integrante que hizo la consulta** | Sergio Cardozo |
 | **Herramienta y modelo** | Claude (Anthropic) · Claude Opus 5.5 |
@@ -139,7 +139,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | Campo | Registro |
 | --- | --- |
 | **ID** | E-5 |
-| **Fecha y hora** | 2026-11-02 _(hh:mm)_ |
+| **Fecha y hora** | 2026-11-02 18:25 |
 | **Fase · paso** | F1 · Paso 1 (preparación de datos) |
 | **Integrante que hizo la consulta** | Sergio Cardozo |
 | **Herramienta y modelo** | Claude (Anthropic) · Claude Opus 5.5 |
