@@ -14,11 +14,11 @@ Anticipar, con una semana de ventaja, si un municipio entrará en brote de dengu
 | --- | --- |
 | Cuaderno de Colab con las ramas A (CNN), B (LSTM/GRU) y C (fusión), ejecutado de principio a fin | [`notebooks/centinela_fase2.ipynb`](notebooks/centinela_fase2.ipynb) · [Abrir en Colab](https://colab.research.google.com/github/SergioCardozoCD/centinela-dengue/blob/main/notebooks/centinela_fase2.ipynb) |
 | Informe técnico (PDF, 6 páginas + referencias) | [`informe/Informe_tecnico_Fase2_Cardozo_Coy.pdf`](informe/Informe_tecnico_Fase2_Cardozo_Coy.pdf) |
-| Gráficas comentadas para el cliente | [`resultados/figuras/`](resultados/figuras/) (lecturas en las celdas 39 y 40 del cuaderno) |
-| Panel interactivo (bonus) | [`resultados/figuras/panel_centinela.html`](resultados/figuras/panel_centinela.html): descargarlo y abrirlo en el navegador |
-| Pesos de los modelos entrenados (`.pth`, 14 archivos, 222 MB) | [Release «Fase 2»](https://github.com/SergioCardozoCD/centinela-dengue/releases/tag/fase2) · huellas SHA-256 en [`resultados/anexo_pesos.csv`](resultados/anexo_pesos.csv) |
+| Gráficas comentadas para el cliente | [`Resultados/figuras/`](Resultados/figuras/) (lecturas en las celdas 39 y 40 del cuaderno) |
+| Panel interactivo (bonus) | [`Resultados/figuras/panel_centinela.html`](Resultados/figuras/panel_centinela.html): descargarlo y abrirlo en el navegador |
+| Pesos de los modelos entrenados (`.pth`, 14 archivos, 222 MB) | [Release «Fase 2»](https://github.com/SergioCardozoCD/centinela-dengue/releases/tag/fase2) · huellas SHA-256 en [`Resultados/anexo_pesos.csv`](Resultados/anexo_pesos.csv) |
 | Bitácora de IA y auditoría (E-14 a E-23, auditoría real E-14) | [`bitacora/bitacora-ia-fase2.md`](bitacora/bitacora-ia-fase2.md) · evidencias en [`bitacora/fase2/`](bitacora/fase2/) |
-| Procedencia de los datos (SHA-256 de cada archivo y de las 551 escenas) | [`resultados/anexo_procedencia.csv`](resultados/anexo_procedencia.csv) |
+| Procedencia de los datos (SHA-256 de cada archivo y de las 551 escenas) | [`Resultados/anexo_procedencia.csv`](Resultados/anexo_procedencia.csv) |
 | Script de descarga de SIVIGILA desde Colombia | [`scripts/descarga_sivigila_local.py`](scripts/descarga_sivigila_local.py) |
 
 **Resultados principales**
@@ -65,7 +65,7 @@ centinela-dengue/
 ├── propuesta/      Propuesta de Datos (Paso 0), firmada
 ├── notebooks/      Cuadernos de Google Colab (PyTorch): Fase 1 y Fase 2
 ├── informe/        Informes técnicos (PDF) de cada fase
-├── resultados/     Fase 2: gráficas para el cliente, panel interactivo y anexos (SHA-256, ablación)
+├── Resultados/     Fase 2: gráficas para el cliente, panel interactivo y anexos (SHA-256, ablación)
 ├── bitacora/       Bitácoras de IA, auditorías y evidencias (fase2/)
 └── scripts/        Descarga de SIVIGILA: en R (Fase 1) y en Python desde Colombia (Fase 2)
 ```
