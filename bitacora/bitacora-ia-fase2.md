@@ -71,7 +71,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Decisión** | Rechazada |
 | **Justificación** | **El equipo vio en la figura** la misma ciudad en carpetas de municipios distintos. Comparar el ETag carpeta por carpeta no puede ver que el mismo archivo está también en otra carpeta, ni que la carpeta no corresponde al municipio que muestra la escena. Unir la etiqueta de un municipio con la foto de otro es un pareo artificial entre modalidades, que la actividad no admite |
 | **Cómo se verificó** | Con la georreferencia de cada escena (celda 8): las carpetas de Barranquilla, Bucaramanga, Itagüí, Montería y Neiva mezclan escenas de esos cinco municipios; la de Barranquilla, por ejemplo, tiene 25 escenas de Barranquilla, 30 de Itagüí y 18 de Bucaramanga. Tras reasignar y quitar repetidas quedan 748 escenas válidas. La auditoría de la sección 4 mide el efecto |
-| **Evidencia de origen** | `bitacora/fase2/E-14a.png` (chat con Claude: la IA reporta las 1.060 escenas) · `bitacora/fase2/E-14b.png` (figura «Los 6 pares de imágenes más parecidos», Colab, 2026-11-17 12:24: la misma escena aparece en las carpetas de Barranquilla, Montería, Neiva y Bucaramanga) · `bitacora/fase2/E-14c.png` (salida de la verificación con la georreferencia) |
+| **Evidencia de origen** | `bitacora/fase2/E-14a.jpg` (chat con Claude: la IA reporta las 1.060 escenas) · `bitacora/fase2/E-14b.png` (figura «Los 6 pares de imágenes más parecidos», Colab, 2026-11-17 12:24: la misma escena aparece en las carpetas de Barranquilla, Montería, Neiva y Bucaramanga) · `bitacora/fase2/E-14c.jpg` (salida de la verificación con la georreferencia) |
 
 ### E-15
 
@@ -147,7 +147,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Decisión** | Modificada |
 | **Justificación** | La primera explicación era equivocada: no era una falla temporal. **El equipo no aceptó el plan B** y pidió un diagnóstico a fondo; mantener la misma fuente y el mismo código de la Fase 1 conserva la trazabilidad. Desde su navegador en Colombia, la API respondía con la estructura esperada: el INS bloquea conexiones desde fuera del país o desde la nube. La solución fue correr el mismo código de la celda 2 en el computador del equipo y subir los conteos agregados a la sesión |
 | **Cómo se verificó** | El script local (Python 3.13.5) devolvió 9.479 filas de 38 archivos y 563.245 casos, igual que la Fase 1; la celda 2 lo confirma («563.245 (Fase 1: 563.245)»). Los conteos no se publican en el repositorio |
-| **Evidencia de origen** | `bitacora/fase2/E-18a.png` (error `ConnectTimeout` y respuesta inicial de la IA con el plan B) · `bitacora/fase2/E-18b.png` (diagnóstico por capas y respuesta de la API en el navegador) · `bitacora/fase2/E-18c.png` (salida del script local) |
+| **Evidencia de origen** | `bitacora/fase2/E-18a.jpg` (error `ConnectTimeout` y respuesta inicial de la IA con el plan B) · `bitacora/fase2/E-18b.jpg` (respuesta XML de la API en el navegador del equipo y diagnóstico por capas de la IA) · `bitacora/fase2/E-18c.jpg` (salida del script local) |
 
 ### E-19
 
@@ -164,9 +164,9 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Qué devolvió la IA** | Agregar líneas a un archivo `.gitignore`, suponiendo que la carpeta era un repositorio git; el equipo pegó las líneas en PowerShell y obtuvo un error |
 | **Datos compartidos con la IA** | Captura de la terminal y del explorador de archivos |
 | **Decisión** | Rechazada |
-| **Justificación** | **El equipo aclaró** que la carpeta no es un repositorio git: sube los archivos desde la página web de GitHub. El `.gitignore` no protegía nada. La IA reconoció el error; la solución fue mover los CSV a la carpeta `data/`, que no se sube |
+| **Justificación** | **La captura del explorador de VS Code que envió el equipo mostró** que la carpeta no es un repositorio git: el equipo sube los archivos desde la página web de GitHub. El `.gitignore` no protegía nada. La IA reconoció el error; la solución fue mover los CSV a la carpeta `data/`, que no se sube |
 | **Cómo se verificó** | El repositorio no contiene `sivigila_conteos.csv` ni `sivigila_procedencia.csv` |
-| **Evidencia de origen** | `bitacora/fase2/E-19a.png` (VS Code, 2026-11-19 10:41: PowerShell rechaza las líneas que indicó la IA) · `bitacora/fase2/E-19b.png` (respuesta de la IA que reconoce que la carpeta no era un repositorio git) |
+| **Evidencia de origen** | `bitacora/fase2/E-19a.png` (VS Code, 2026-11-19 10:41: PowerShell rechaza las líneas que indicó la IA) · `bitacora/fase2/E-19b.jpg` (la IA insiste con el `.gitignore` y, al ver la captura del equipo, reconoce que la carpeta no era un repositorio git y propone mover los CSV a `data/`) |
 
 ### E-20
 
@@ -223,7 +223,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Decisión** | Modificada |
 | **Justificación** | Esa versión no reproducía el error real, así que no lo medía. Al leer la salida que compartió el equipo (758, no 1.060), la IA reconoció su error y corrigió la celda para comparar el ETag carpeta por carpeta |
 | **Cómo se verificó** | El equipo ejecutó la celda corregida: la primera línea reproduce exactamente las 1.060 escenas de E-14. Los resultados están en la sección 4 |
-| **Evidencia de origen** | `bitacora/fase2/E-22.png` (salida de la primera versión con 758 y respuesta de la IA que reconoce el error) |
+| **Evidencia de origen** | `bitacora/fase2/E-22.jpg` (respuesta de la IA que reconoce el error de la primera versión: 758 escenas en lugar de 1.060 y brecha engañosa de +0,003) |
 
 ### E-23
 
@@ -256,7 +256,7 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 | **Entrada de la bitácora** | E-14 (y E-22, el error en la primera versión de la propia auditoría) |
 | **Contexto** | Preparación de las imágenes de la rama A: de qué municipio es cada escena y cuáles están repetidas |
 | **Qué dijo la IA** | Que había 1.060 escenas distintas, tras quitar repetidas por ETag dentro de cada carpeta, cada una con el municipio de su carpeta |
-| **Evidencia de origen** | `bitacora/fase2/E-14a.png`, `E-14b.png` y `E-14c.png` (ver E-14) |
+| **Evidencia de origen** | `bitacora/fase2/E-14a.jpg`, `E-14b.png` y `E-14c.jpg` (ver E-14) |
 | **Por qué estaba mal** | El ETag solo detecta archivos idénticos dentro de lo que se compara. Comparado carpeta por carpeta, no ve que el mismo archivo está también en otra carpeta ni que la carpeta no corresponde al municipio que muestra la escena. Resultado: imágenes de una ciudad con la etiqueta epidemiológica de otra (pareo artificial entre modalidades) y la misma foto enseñada como zonas distintas |
 | **Cómo se detectó** | **El equipo** vio en una figura de la exploración la misma ciudad en carpetas de municipios distintos; la georreferencia de cada escena lo confirmó (celda 8) |
 | **Corrección aplicada** | Reasignar cada escena al municipio que muestra según su georreferencia y quitar repetidas por contenido (celdas 7 y 8, E-15): 748 escenas válidas y 551 tras el filtro de nubes |
@@ -266,24 +266,19 @@ Cada interacción se marca como **Aceptada · Modificada · Rechazada**. La evid
 
 ## 5. Evidencias
 
-Ya incluidas en `bitacora/fase2/` (capturas que el equipo compartió en el chat):
+Todas están en `bitacora/fase2/`: capturas que el equipo compartió en el chat con Claude o tomó del historial del chat.
 
-| Archivo | Qué muestra |
-| --- | --- |
-| `E-14b.png` | La figura de pares con la misma escena en carpetas de municipios distintos (2026-11-17 12:24) |
-| `E-15.png` | El `ValueError` de la exploración (2026-11-17 11:38) |
-| `E-19a.png` | El error de PowerShell con las líneas que indicó la IA (2026-11-19 10:41) |
-
-Pendientes: capturas del chat con Claude que el equipo toma y guarda en `bitacora/fase2/` con estos nombres:
-
-| Archivo | Qué debe mostrar | Dónde está en el chat |
+| Archivo | Qué muestra | Entrada |
 | --- | --- | --- |
-| `E-14a.png` | El mensaje de la IA con las 1.060 escenas | 17 nov, hacia las 11:20 |
-| `E-14c.png` | La salida de la verificación con la georreferencia | 17 nov, después de las 12:24 |
-| `E-18a.png` | El `ConnectTimeout` de la celda 2 y la primera respuesta de la IA (falla temporal, plan B) | 18 nov, hacia las 09:35 |
-| `E-18b.png` | El diagnóstico por capas y la respuesta XML de la API en el navegador | 19 nov, en la mañana |
-| `E-18c.png` | La salida del script local (563.245 casos) | 19 nov, 10:36 |
-| `E-19b.png` | La respuesta de la IA que reconoce que la carpeta no era un repositorio git | 19 nov, después de las 10:41 |
-| `E-22.png` | La salida de la primera versión de la auditoría (758) y la respuesta de la IA que reconoce el error | 19 nov, 19:06 y 19:12 |
+| `E-14a.jpg` | La respuesta de la IA con las 1.060 escenas «útiles únicas» (17 nov) | E-14 |
+| `E-14b.png` | La figura de pares con la misma escena en carpetas de municipios distintos (2026-11-17 12:24) | E-14 |
+| `E-14c.jpg` | La salida de la verificación con la georreferencia: la escena no cubre el casco urbano en 5 municipios (17 nov) | E-14 |
+| `E-15.png` | El `ValueError` de la exploración (2026-11-17 11:38) | E-15 |
+| `E-18a.jpg` | El `ConnectTimeout` de la celda 2 y la primera respuesta de la IA (portal caído, plan B) (18 nov) | E-18 |
+| `E-18b.jpg` | La respuesta XML de la API en el navegador del equipo y el diagnóstico por capas de la IA (19 nov) | E-18 |
+| `E-18c.jpg` | La salida del script local: 9.479 filas, 38 archivos y 563.245 casos (2026-11-19 10:36) | E-18 |
+| `E-19a.png` | El error de PowerShell con las líneas que indicó la IA (2026-11-19 10:41) | E-19 |
+| `E-19b.jpg` | La IA reconoce que la carpeta no era un repositorio git y propone mover los CSV a `data/` (19 nov) | E-19 |
+| `E-22.jpg` | La respuesta de la IA que reconoce el error en la primera versión de la auditoría (2026-11-19 19:12) | E-22 |
 
-*Horas en hora de Colombia. Las marcadas con «≈» son aproximadas: se reconstruyeron a partir de la hora de los archivos de trabajo de esa sesión; las demás corresponden a la hora del mensaje en el chat.*
+*Horas en hora de Colombia. Las marcadas con «≈» en las entradas son aproximadas: se reconstruyeron a partir de la hora de los archivos de trabajo de esa sesión; las demás corresponden a la hora del mensaje en el chat o de la captura.*
