@@ -32,8 +32,8 @@ Quienes firman declaran también que **comprenden, verificaron y pueden defender
 
 | Integrante | Firma | Fecha |
 | --- | --- | --- |
-| Sergio Alexander Cardozo Ovadia | ______________________ | 2026-11-21 |
-| Cesar Augusto Coy Velandia | ______________________ | 2026-11-21 |
+| Sergio Alexander Cardozo Ovadia | _ SergioCardozo _ | 2026-11-21 |
+| Cesar Augusto Coy Velandia | _ Cesar A Coy _ | 2026-11-21 |
 
 ## 3. Registro de interacciones
 
